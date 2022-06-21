@@ -196,12 +196,12 @@ def create_time_plot(group_var, inst_var):
     :param inst_var:
     :return:
     """
-    ind_data_paths = '../data/'
+    ind_data_paths = '../data'
     list_files = os.listdir(ind_data_paths)
     bone_list = [ind_data_paths + file for file in list_files if "bone" in file]
     bld_list = [ind_data_paths + file for file in list_files if "blood" in file]
-    specific_inst_bone = ind_data_paths + "bone_" + str(group_var) + "_" + str(inst_var) + ".txt"
-    specific_inst_blood = ind_data_paths + "blood_" + str(group_var) + "_" + str(inst_var) + ".txt"
+    specific_inst_bone = ind_data_paths + "/bone_" + str(group_var) + "_" + str(inst_var) + ".txt"
+    specific_inst_blood = ind_data_paths + "/blood_" + str(group_var) + "_" + str(inst_var) + ".txt"
     bm_data = pd.read_csv(specific_inst_bone, header=None)
     blood_data = pd.read_csv(specific_inst_blood, header=None)
     bm_data.drop_duplicates(inplace=True)

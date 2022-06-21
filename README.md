@@ -7,7 +7,10 @@ This repository provides the data and the code necessary to reproduce the result
 
 An single simulation of CML progression can be produced by running the code cml_simulator.py, with the proper
 arguments. The code will produce two files a bone and blood txt files, containing a sample of the status
-of the bone marrow and bloodstream at different timepoints. 
+of the bone marrow and bloodstream at regular intervals in the individual_results folder. The complete pipeline for simulating and creating the 
+data analysis given a specific combination of model parameters is not supported in this repository.
+We include the code so that everyone which is interested in the details about the implementation can take 
+a deeper look.
 
 ## Simulated data used in the manuscript figures
 

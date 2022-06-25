@@ -3,6 +3,15 @@ This repository provides the data and the code necessary to reproduce the result
 
 **Include link to the article**
 
+## The requirements for being able to run the code are the following Python modules
+- kaleido==0.2.1
+- matplotlib==3.5.2
+- numpy==1.23.0
+- pandas==1.4.3
+- plotly==5.9.0
+- Linux-poppler
+
+
 ## Computer simulation of the CML progression model
 
 An single simulation of CML progression can be produced by running the code cml_simulator.py, with the proper

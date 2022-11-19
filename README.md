@@ -24,7 +24,9 @@ a deeper look.
 ## Simulated data used in the manuscript figures
 
 The data simulated using the cml_simulator.py is presented in the folder simulated_data.
-This folder contains two files with the aggregated results from the optimization
+The data generated during a single instance (with number 3180_80) is presented in the folder.
+Files names correspond to the number and type of cells on the bloodstream or the bone marrow.
+This folder contains also two files with the aggregated results from the optimization
 of the CML model parameters. This files cannot be reproduced directly with the
 cml_simulator.py, the entire optimization process has a high resource consumption
 and will not be easy to reproduce. For more detailed instructions of how to 

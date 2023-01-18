@@ -531,15 +531,16 @@ def create_param_comparison(driv_data, bcr_data):
 if __name__ == "__main__":
     if not os.path.exists("../results"):
         os.mkdir("../results")
-    create_time_plot(3180, 80)
-    driv_data = import_sum_dataset("../data/filtered_full_final_driver.csv")
-    only_bcr_data = import_sum_dataset("../data/filtered_full_final_no_mut.csv")
+    # create_time_plot(3180, 80)
+    driv_data = import_sum_dataset("data/filtered_full_final_driver.csv")
+    # only_bcr_data = import_sum_dataset("../data/filtered_full_final_no_mut.csv")
 
     driv_phase_filter = phase_filter(driv_data)
-    bcr_phase_filter = phase_filter(only_bcr_data)
+    # bcr_phase_filter = phase_filter(only_bcr_data)
+    print(driv_phase_filter[driv_phase_filter["Fitness BCR-ABL"]< 0.25].iloc[-1,:10])
 
-    create_param_comparison(driv_phase_filter, bcr_phase_filter)
+    # create_param_comparison(driv_phase_filter, bcr_phase_filter)
 
-    image = plot_medians(driv_data)
-    image.write_image("../results/median_durations.eps", engine="kaleido")
-    create_mutation_profile(driv_data)
+    # image = plot_medians(driv_data)
+    # image.write_image("../results/median_durations.eps", engine="kaleido")
+    # create_mutation_profile(driv_data)

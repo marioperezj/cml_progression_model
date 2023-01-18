@@ -182,7 +182,7 @@ def ind_simulation(mob_param,
     fit = (max_fit - fit_bcr_f) / num_crit_mut
     fit += fit * 0.1
     num_mut = 15
-    out_det_freq = 1e3
+    out_det_freq = 1e2
     inst_id_out_freq = 1
     bld_file_out = results_detail + 'blood_' + str(point_id) + '_' + str(inst_id) + '.txt'
     bm_file_out = results_detail + 'bone_' + str(point_id) + '_' + str(inst_id) + '.txt'
@@ -567,14 +567,16 @@ if __name__ == "__main__":
 
     # This array holds the model parameters of the individual simulation with the following order
     # beta, alpha, mu, stem cell division rate per year, BCR-ABL mutation strength, K, kappa, group_sim_id
-    test_arr = [50, 50, 0, 6, 0.4, 0.1, 0.03, 3]
+    # test_arr = [50, 50, 0, 6, 0.4, 0.1, 0.03, 3]
     # initiate_sim(test_arr)
-    if not os.path.exists("../results"):
-        os.mkdir("../results")
-    results_summary = '../results/'
-    results_detail = '../results/'
+    if not os.path.exists("data"):
+        os.mkdir("data")
+    results_summary = 'data/'
+    results_detail = 'data/'
     # initiate_sim(load_parameter_fun(args.job_id, "/scratch/mape1416/cml/current_data/driver_main_points.csv"))
-    initiate_sim(test_arr)
+    # initiate_sim(test_arr)
+    vec = [50, 50, 0.0, 6.315789, 0.231579, 0.1, 0.03, 3, 1]
+    ind_simulation(*vec)
     # pr.disable()
     # s = io.StringIO()
     # sortby = "cumulative"
